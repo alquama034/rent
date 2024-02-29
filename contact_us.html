@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Home Rent</title>
+        <link rel="stylesheet" href="Style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        
+   
+</head>
+<body>
+<!-- <div class="header_"> -->
+<div class="container">
+<div  class="navbar">
+<div class="Logo">
+                <a href="Index.html"><img src="Image\websiteLogo.png" width="150px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="Index.html">Home</a></li>
+                    <li ><a href="Collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <!-- <li class="active"><a href="contact_us.html">Contact</a></li> -->
+                    <li><a href="file:///C:/Users/user/OneDrive/Desktop/website/contact_us.html">Logout</a></li>
+                </ul>
+            </nav>
+             <a href="Index.html"><img src="Image\SideLogo.png" class="Save" width="30px" height="30px"></a> 
+            <img src="Image\MenuIcon.png" class="menu-icon"onclick="menutoggle()">
+            </div>       
+              
+    <div class="container_ " >
+      <span class="big-circle"></span>
+      <img src="Image\shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            dolorum adipisci recusandae praesentium dicta!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="Image\location.png" class="icon" alt="" />
+              <p>Jamia Nagar Okhla, New Delhi 110025</p>
+            </div>
+            <div class="information">
+              <img src="Image\email.png" class="icon" alt="" />
+              <p>homeRent@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="Image\phone.png" class="icon" alt="" />
+              <p>123-456-789</p>
+            </div>
+          </div>
+          
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+                <div class="log">
+             <h1>Admin Login</h1>
+             </div>
+          <form id="form_id" method="post" name="myform">
+            <div class="uname">
+            <label>User Name :</label>
+            <input type="text" name="username" id="username"/>
+            </div>
+          </br>
+          <div class="pass">
+            <label>Password :</label>
+            <input type="password" name="password" id="password"/>
+          </div>
+            <br>
+            <br>
+            <input type="button"  value="Login" id="submit" onclick="validate()"/>
+            </form>
+          
+        </div>
+</div> 
+</div> 
+     
+</div>
+<!----------------------  FOOTER  ------------------>
+
+<div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-2">
+                        <a href="Index.html"><img src="Image\websiteLogo.png"></a>
+                        <p>Our purpose is to provide you a better Home</p>
+                    </div> 
+                    <div class="footer-col-3">
+                        <h2>Useful Links</h2>
+                        <ul>
+                            <li>For Logo</li>
+                            <li>For Background</li>
+                            <li>For Pictures</li>
+                        </ul>
+                    </div>
+                    <!-- ----------------Social-menu-------- -->
+                    <div class="social-menu">
+                        <h1>Follow Us</h1>
+                        <ul>
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                      </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!------------ js for toggle menu ---------------->
+        <script>
+            var MenuItems=document.getElementById("MenuItems");
+            MenuItems.style.maxHeight="0px";
+            function menutoggle(){
+                if(MenuItems.style.maxHeight=="0px")
+                {
+                    MenuItems.style.maxHeight="200px"
+                }
+                else
+                {
+                    MenuItems.style.maxHeight="0px"
+                }
+            }
+            const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+       
+
+
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if ( username == "Alquama" && password == "formget#123"){
+alert ("Login successfully");
+window.location = "file:///C:/Users/user/OneDrive/Desktop/website/Index.html"; // Redirecting to other page.
+return false;
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+
+
+        </script>
+        <!-- <script src="app.js"></script> -->
+</body>
+</html>
